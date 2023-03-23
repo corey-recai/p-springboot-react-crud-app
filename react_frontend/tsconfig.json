@@ -17,12 +17,12 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "components/*": ["src/components/*"],
-      "components": ["src/components"],
-      "utils/*": ["src/utils/*"],
-      "utils": ["src/utils"],
-      "services/*": ["src/services/*"],
-      "services": ["src/services"]
+      "@components/*": ["src/components/*"],
+      "@components": ["src/components"],
+      "@utils/*": ["src/utils/*"],
+      "@utils": ["src/utils"],
+      "@services/*": ["src/services/*"],
+      "@services": ["src/services"]
     }
   },
   "include": ["src"],

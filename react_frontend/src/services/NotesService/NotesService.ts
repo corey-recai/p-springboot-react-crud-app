@@ -1,9 +1,6 @@
-import httpClient from "utils/http";
+import httpClient from "@utils/http";
+import { AxiosResponse } from "axios";
 
-const getAll = () => {
+export const getAll = (): Promise<AxiosResponse<any, any>> => {
   return httpClient.get("/notes");
-};
-
-export default {
-  getAll,
 };

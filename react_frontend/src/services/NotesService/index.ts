@@ -1,1 +1,1 @@
-export { default } from "./NotesService";
+export * from "./NotesService";
