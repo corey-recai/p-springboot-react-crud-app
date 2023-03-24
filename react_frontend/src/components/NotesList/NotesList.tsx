@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { getAll } from "@services/NotesService";
 
+import ListGroup from "react-bootstrap/ListGroup";
+
 export const NotesList: React.FC = () => {
   const [notes, setNotes] = useState([]);
 
@@ -16,17 +18,13 @@ export const NotesList: React.FC = () => {
       });
   }, []);
   return (
-    <div>
-      <h1>List of Notes</h1>
-      <ul>
-        {notes &&
-          notes.map(({ title, body, category, id }) => (
-            <li key={id}>
-              <p>{title}</p>
-              <p>{body}</p>
-            </li>
-          ))}
-      </ul>
-    </div>
+    <ListGroup variant='flush'>
+      {notes &&
+        notes.map(({ title, body, category, id }) => (
+          <ListGroup.Item key={id}>
+            <h6 className='text-truncate'>{body}</h6>
+          </ListGroup.Item>
+        ))}
+    </ListGroup>
   );
 };
